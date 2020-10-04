@@ -1,0 +1,26 @@
+{
+ "content": null,
+ "creation": "2020-02-13 08:49:07.441072",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2020-02-16 20:04:20.291221",
+ "modified_by": "Administrator",
+ "module": "Tools Box",
+ "name": "business_board",
+ "owner": "Administrator",
+ "page_name": "business_board",
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Sales Analytics"
+}

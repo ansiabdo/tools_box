@@ -1,0 +1,188 @@
+{
+ "autoname": "GCL-OTS-.####",
+ "creation": "2017-10-14 15:42:17.579171",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "raised_by",
+  "raised_by_name",
+  "department",
+  "column_break_3",
+  "date",
+  "section_break_6",
+  "start_time",
+  "end_time",
+  "column_break_8",
+  "duration",
+  "section_break_8",
+  "overtime_request",
+  "overtime_information",
+  "total",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "raised_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Raised By",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "depends_on": "raised_by",
+   "fetch_from": "raised_by.employee_name",
+   "fetch_if_empty": 1,
+   "fieldname": "raised_by_name",
+   "fieldtype": "Read Only",
+   "label": "Raised By  Name",
+   "reqd": 1
+  },
+  {
+   "depends_on": "raised_by",
+   "fetch_from": "raised_by.department",
+   "fetch_if_empty": 1,
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Department",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Duration"
+  },
+  {
+   "description": "Date and time the overtime is to start",
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "in_standard_filter": 1,
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "description": "Expected completion time.",
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "in_standard_filter": 1,
+   "label": "End Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Read Only",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Overtime information"
+  },
+  {
+   "fieldname": "overtime_request",
+   "fieldtype": "Link",
+   "label": "Overtime Request",
+   "options": "Overtime Request",
+   "reqd": 1
+  },
+  {
+   "fieldname": "overtime_information",
+   "fieldtype": "Table",
+   "label": "Overtime information",
+   "options": "Overtime Sheet Item"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Read Only",
+   "label": "Total",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Overtime Sheet",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-07-09 12:22:04.771751",
+ "modified_by": "Administrator",
+ "module": "_HR",
+ "name": "Overtime Sheet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
